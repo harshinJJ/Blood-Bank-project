@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    
+    <link rel="stylesheet" href="/css/signup.css">
+
+    <title>Signup</title>
+</head>
+<body class="bodycolo">
+    <section>
+         <!-- nav part -->
+         <%- include("Header") %>
+    </section>
+<div class="addheight"></div>
+    <section class="formsection">
+        <div class="form-container">
+            <p class="title">SIGN UP</p>
+            <form class="form" action="/donate/tbdata" method="post">
+                <div class="input-group">
+                    <label for="name" class="labels">Full name</label>
+                    <input type="text" name="name" id="name" placeholder="" class="inputsform">
+                </div>
+                <div class="input-group">
+                    <label for="email" class="labels">Email</label>
+                    <input type="email" name="email" id="email" placeholder="" required class="inputsform">
+                </div>
+                <div class="input-group">
+                    <label for="username" class="labels">Phone</label>
+                    <input type="number" name="phone" id="phone" required placeholder="" class="inputsform">
+                </div>
+                <div class="input-group">
+                    <label for="btype" class="labels">Blood type</label>
+                    <input type="text" name="btype" id="btype" required placeholder="" class="inputsform">
+                </div>
+                <div class="input-group">
+                    <label for="password" class="labels">Password</label>
+                    <input type="password" name="password" id="password" required placeholder="" class="inputsform">
+                </div>
+                <div class="input-group">
+                    <!-- <label for="place" class="labels">Place</label> -->
+                    <!-- <input type="text" name="place" id="place" placeholder="" class="inputsform"> -->
+                    <label for="place" class="labels" >District :</label>
+                       <select name="place" id="place" class="selecting">
+                        <option value="kozhikode">kozhikode</option>
+                         <option value="kannur">kannur</option>
+                         <option value="kollam">kollam</option>
+                         <option value="thrissur">thrissur</option>
+                      </select>
+                </div>
+                <br>
+
+                <button class="sign">Sign Up</button>
+            </form>
+            <br>
+            
+            <p class="signin">Already have an account?
+                <a rel="noopener noreferrer" href="/donate/login" class="">Sign in</a>
+            </p>
+        </div>
+    </section>
+   
+    <div class="addheight1"></div>
+    <!-- footer part -->
+
+   <section>
+    <%- include("footer") %>
+   </section>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous"></script>  
+</body>
+</html>
+

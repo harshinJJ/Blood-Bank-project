@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    
+    <link rel="stylesheet" href="/css/signup.css">
+
+    <title>Signup</title>
+</head>
+<body class="bodycolo">
+    <section>
+         <!-- nav part -->
+         <%- include("Header") %>
+    </section>
+<div class="addheight"></div>
+    <section class="formsection">
+        <div class="form-container">
+            <p class="title">SIGN UP</p>
+            <form class="form" action="/donate/edited/<%= editdoner._id %>" method="get">
+                <div class="input-group">
+                    <label for="name" class="labels">Full name</label>
+                    <input type="text" name="name" value="<%= editdoner.name%>" id="name" placeholder="" class="inputsform">
+                </div>
+                <div class="input-group">
+                    <label for="email" class="labels">Email</label>
+                    <input type="email" value="<%= editdoner.email%>" name="email" id="email" placeholder="" required class="inputsform">
+                </div>
+                <div class="input-group">
+                    <label for="username" class="labels">Phone</label>
+                    <input type="number" name="phone" value="<%= editdoner.phone%>" id="phone" required placeholder="" class="inputsform">
+                </div>
+                <div class="input-group">
+                    <label for="btype" class="labels">Blood type</label>
+                    <input type="text" name="btype" value="<%= editdoner.blood%>" id="btype" required placeholder="" class="inputsform">
+                </div>
+                <div class="input-group">
+                    <label for="password" class="labels">Password</label>
+                    <input type="password" name="password" value="<%= editdoner.password%>" id="password" required placeholder="" class="inputsform">
+                </div>
+                <div class="input-group">
+                    <label for="place" class="labels">Place</label>
+                    <input type="text" name="place" value="<%= editdoner.place%>" id="place" placeholder="" class="inputsform"> 
+                </div>
+                <br>
+
+                <button class="sign">Edit</button>
+            </form>
+            <br>
+        </div>
+    </section>
+    <div class="addheight"></div>
+<%- include("footer") %>
+</section>
+ <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous"></script>  
+</body>
+</html>

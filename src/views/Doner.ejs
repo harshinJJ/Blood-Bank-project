@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    
+    <link rel="stylesheet" href="/css/doner.css">
+
+    <title>Why donate blood</title>
+</head>
+<body class="bodycolo">
+    <section>
+         <!-- nav part -->
+         <%- include("Header") %>
+
+   </section>
+
+   <h1 class="headi">LIST OF DONERS AVIALABLE</h1>
+   <div class="adheight"></div>
+
+   <div class="container text-center">
+    <div class="row">
+      <div class="col">
+        <a href="/donate/district/kozhikode">
+        <button class="button type1">
+          <span class="btn-txt">Kozhikode</span>
+      </button>
+    </a>
+ 
+      </div>
+      
+      <div class="col">
+        <a href="/donate/district/kannur">
+        <button class="button type1">
+          <span class="btn-txt">Kannur</span>
+      </button>
+    </a>
+      </div>
+      <div class="col">
+        <a href="/donate/district/thrissur">
+        <button class="button type1">
+          <span class="btn-txt">Thrissur</span>
+      </button>
+    </a>
+      </div>
+      <div class="col">
+        <a href="/donate/district/kannur">
+        <button class="button type1">
+          <span class="btn-txt">Kannur</span>
+      </button>
+    </a>
+      </div>
+      <div class="col">
+        <a href="/donate/district/kollam">
+        <button class="button type1">
+          <span class="btn-txt">Kollam</span>
+      </button>
+    </a>
+      </div>
+    </div>
+  </div>
+
+  <div class="adheight"></div>
+   <section>
+     <div class="container text-center">
+       <div class="row colposi">
+        <% for(i=0; i<donerdetails.length; i++) { %>
+          <div class="col-4 textposi">
+            <div class="card-client">
+              <p class="name-client spcolor"> BLOOD : <%= donerdetails[i].blood %> </p>
+              <br>
+              <span class="othdet"> <%= donerdetails[i].name %> </span>
+              <span class="othdet"> <%= donerdetails[i].place %> </span>
+              <span class="othdet"> <%= donerdetails[i].phone %> </span>
+              <span class="othdet"> <%= donerdetails[i].email %> </span>
+              <br>
+              <a href="/donate/delete/<%= donerdetails[i]._id %>" style="text-decoration: none;">
+                <button class="button type1">
+                    <span class="btn-txt">Delete</span>
+                </button>
+              </a>
+              <a href="/donate/edit/<%= donerdetails[i]._id %>" style="text-decoration: none;">
+                <button class="button type1">
+                    <span class="btn-txt">Edit</span>
+                </button>
+              </a>
+              </div>
+          </div>
+          <% } %>  
+         
+       </div>
+     </div>
+   </section>
+
+   
+<div class="adheight1"></div>
+
+<!-- footerpart -->
+
+<section>
+    <%- include("footer") %>
+</section>
+
+
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous"></script>  
+
+    </body>
+    </html>

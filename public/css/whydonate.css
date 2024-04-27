@@ -1,0 +1,121 @@
+
+  .bodycolo{
+    background-color: black;
+  }
+  .contentpart{
+    text-align: center;
+  }
+  .adheight{
+    height: 50px;
+  }
+  .hposi{
+    
+    margin-top : 40px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 50px;
+    color: #f62d44dd
+  }
+.imganddis{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+  .card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    width: 330px;
+    padding: 20px 1px;
+    margin: 10px 0;
+    text-align: center;
+    position: relative;
+    cursor: pointer;
+    /* box-shadow: 0 0px 27px 0px #f62d44dd,0 4px 6px -4px #f62d44dd; */
+    border-radius: 20px;
+    background-color: black;
+    background: linear-gradient(45deg, black 0%, black 100%);
+    height: 100%;
+  }
+  
+  .content {
+    padding: 20px;
+  }
+
+ .description {
+    color: rgba(255, 255, 255, 0.6);
+    margin-top: 10px;
+    font-size: 16px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  }
+  
+ .title {
+    font-weight: 600;
+    text-transform: uppercase;
+    color: #f62d44dd;
+    margin-top: 10px;
+    font-size: 25px;
+    letter-spacing: 1px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  }
+  .imgsize1{
+    width: 89%;
+  }
+  .imgsize2{
+    width: 89%;
+  }
+  .imgsize3{
+    width: 86%;
+  }
+
+  .buttonposition{
+    display: flex;
+    justify-content: center;
+    
+  }
+  .button {
+    height: 50px;
+    width: 200px;
+    position: relative;
+    background-color: transparent;
+    cursor: pointer;
+    border: 2px solid #f62d44dd;
+    overflow: hidden;
+    border-radius: 30px;
+    color: #333;
+    transition: all 0.5s ease-in-out;
+  }
+  
+  .btn-txt {
+    z-index: 1;
+    font-weight: 700;
+    letter-spacing: 4px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    color: #f62d44dd;
+  }
+  
+  .type1::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    transition: all 0.5s ease-in-out;
+    background-color:  rgba(255, 255, 255, 0.6);
+    border-radius: 30px;
+    visibility: hidden;
+    height: 10px;
+    width: 10px;
+    z-index: -1;
+  }
+  
+  .button:hover {
+    box-shadow: 1px 1px 200px #252525;
+    color: #fff;
+    border: none;
+  }
+  
+  .type1:hover::after {
+    visibility: visible;
+    transform: scale(100) translateX(2px);
+  }
+  
